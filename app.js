@@ -359,27 +359,4 @@ class App{
 		this.renderer.render(this.scene, this.camera);
 	}
 
-    int frameCount = 0;
-
-    void Update()
-{
-    frameCount++;
-}
-
-float timeStart = Time.time;
-
-void Update()
-{
-    frameCount++;
-    float timeElapsed = Time.time - timeStart;
-    float fps = frameCount / timeElapsed;
-}
-
-void OnGUI()
-{
-    GUI.Label(new Rect(10, 10, 100, 20), "FPS: " + fps);
-}
-
-}
-
 export { App };
