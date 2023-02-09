@@ -350,13 +350,14 @@ class App{
             }
         }
         
-        if ( this.immersive != this.renderer.xr.isPresenting){
+         if ( this.immersive != this.renderer.xr.isPresenting){
             this.resize();
             this.immersive = this.renderer.xr.isPresenting;
         }
         
-        //this.stats.update();
+        this.stats.update();
 		this.renderer.render(this.scene, this.camera);
 	}
+}
 
 export { App };
